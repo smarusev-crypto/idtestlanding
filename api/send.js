@@ -5,8 +5,8 @@ export default async function handler(req, res) {
 
   const { name, phone, section, task, comment } = req.body;
 
-  const BOT_TOKEN = "8866381888:AAGkvFl8WngeLR59rO6R93qSi2QgwwuQ09U";
-  const CHAT_ID = "390244830";
+  const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+  const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 
   const message = `🔥 *Новая заявка с сайта makeid.ru* 🔥\n\n` +
                   `👤 *Имя / Контакт:* ${name || 'Не указано'}\n` +
